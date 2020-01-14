@@ -5,7 +5,6 @@ int current = 1;
 
 Game::Game() : window(sf::VideoMode(800, 600), "OpenGL Cube")
 {
-
 }
 
 Game::~Game() {}
@@ -202,7 +201,6 @@ void Game::update()
 				vertices[i + 1] = vector.y;
 			}
 		}
-
 		//Translate -
 		if ((sf::Keyboard::isKeyPressed(sf::Keyboard::Comma)))
 		{
@@ -218,10 +216,6 @@ void Game::update()
 				vertices[i + 1] = vector.y;
 			}
 		}
-
-
-
-
 
 
 
@@ -243,7 +237,6 @@ void Game::render()
 	glVertexPointer(3, GL_FLOAT, 0, &vertices);
 	glColorPointer(3, GL_FLOAT, 0, &colors);
 
-	//glDrawArrays(GL_TRIANGLES, 0, 3);
 
 	glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, &vertex_index);
 
@@ -258,4 +251,3 @@ void Game::unload()
 {
 	std::cout << "Cleaning up" << std::endl;
 }
-

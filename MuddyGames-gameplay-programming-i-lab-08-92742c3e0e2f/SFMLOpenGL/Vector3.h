@@ -44,7 +44,6 @@ public:
 
 
 
-
 	float Length();
 
 	float LengthSquared();
